@@ -1,5 +1,5 @@
 const chai = require('chai');
-const Win = require('../app/Win');
+const Win = require('../../app/Win');
 
 const expect = chai.expect;
 

@@ -1,5 +1,5 @@
 const chai = require('chai');
-const Exacta = require('../app/Exacta');
+const Exacta = require('../../app/Exacta');
 
 const expect = chai.expect;
 
