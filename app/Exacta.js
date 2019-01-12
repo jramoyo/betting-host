@@ -8,6 +8,10 @@ module.exports = class {
   }
 
   bet(first, second, stake) {
+    if (isNaN(first) || isNaN(second) || isNaN(stake)) {
+      throw new Error('Invalid parameters');
+    }
+
     const selection = `${first}_${second}`;
     this.total += stake;
     this.pool[selection] = this.pool[selection] || [];
@@ -15,6 +19,10 @@ module.exports = class {
   }
 
   result(first, second) {
+    if (isNaN(first) || isNaN(second)) {
+      throw new Error('Invalid parameters');
+    }
+
     const selection = `${first}_${second}`;
     if (!this.pool[selection]) {
       return 0

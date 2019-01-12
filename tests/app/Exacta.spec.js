@@ -35,4 +35,15 @@ describe('Exacta', () => {
     expect(exacta.result(2, 3)).to.equal(0);
   });
 
+  it('throws an exception if the bet parameters are not numbers', () => {
+    expect(() => exacta.bet('a', 1, 2)).to.throw(Error);
+    expect(() => exacta.bet(1, 'a', 2)).to.throw(Error);
+    expect(() => exacta.bet(1, 2, 'a')).to.throw(Error);
+  });
+
+  it('throws an exception if the result parameters are not numbers', () => {
+    expect(() => exacta.result('a', 1)).to.throw(Error);
+    expect(() => exacta.result(1, 'a')).to.throw(Error);
+  });
+
 });

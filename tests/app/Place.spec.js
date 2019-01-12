@@ -37,4 +37,13 @@ describe('Place', () => {
     expect(place.result(2)).to.equal(0);
   });
 
+  it('throws an exception if the bet parameters are not numbers', () => {
+    expect(() => place.bet('a', 1)).to.throw(Error);
+    expect(() => place.bet(1, 'a')).to.throw(Error);
+  });
+
+  it('throws an exception if the result parameters are not numbers', () => {
+    expect(() => place.result('a')).to.throw(Error);
+  });
+
 });
