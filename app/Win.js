@@ -14,8 +14,12 @@ module.exports = class {
   }
 
   result(selection) {
+    if (!this.pool[selection]) {
+      return 0
+    }
+
     const pot = this.total - (this.total * COMMISSION);
-    const shares = this.pool[selection].reduce((total, stake) => total + stake);
+    const shares = this.pool[selection].reduce((total, stake) => total + stake, 0);
     return roundTo((pot / shares), 2);
   }
 };

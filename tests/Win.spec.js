@@ -5,8 +5,13 @@ const expect = chai.expect;
 
 describe('Win', () => {
 
+  let win;
+
+  beforeEach(() => {
+    win = new Win()
+  })
+
   it('calculates the dividends with 2 decimal places', () => {
-    const win = new Win();
 
     win.bet(1, 3);
     win.bet(2, 4);
@@ -23,6 +28,11 @@ describe('Win', () => {
 
     expect(win.result(2)).to.equal(2.61);
 
+  });
+
+  it('calculates a zero dividend if there are no bets on the winning stake', () => {
+    win.bet(1, 10);
+    expect(win.result(2)).to.equal(0);
   });
 
 });
