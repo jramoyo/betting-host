@@ -9,7 +9,7 @@ module.exports = class {
 
   bet(selection, stake) {
     if (isNaN(selection) || isNaN(stake)) {
-      throw new Error('Invalid parameters');
+      throw new Error('Invalid bet parameters');
     }
 
     this.total += stake;
@@ -19,7 +19,7 @@ module.exports = class {
 
   result(selection) {
     if (isNaN(selection)) {
-      throw new Error('Invalid parameters');
+      throw new Error('Invalid result parameters');
     }
 
     if (!this.pool[selection]) {

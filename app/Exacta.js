@@ -9,7 +9,7 @@ module.exports = class {
 
   bet(first, second, stake) {
     if (isNaN(first) || isNaN(second) || isNaN(stake)) {
-      throw new Error('Invalid parameters');
+      throw new Error('Invalid bet parameters');
     }
 
     const selection = `${first}_${second}`;
@@ -20,7 +20,7 @@ module.exports = class {
 
   result(first, second) {
     if (isNaN(first) || isNaN(second)) {
-      throw new Error('Invalid parameters');
+      throw new Error('Invalid result parameters');
     }
 
     const selection = `${first}_${second}`;
