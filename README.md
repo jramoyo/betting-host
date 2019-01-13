@@ -8,7 +8,7 @@ git clone git@github.com:jramoyo/betting-host.git
 cd betting-host
 ```
 
-Ensure that the correct version of Node.js is loaded (only if `nvm` is available):
+Ensure that version `v10.5.0` of Node.js is loaded (if `nvm` is available):
 ```
 nvm use
 ```
